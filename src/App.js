@@ -2,12 +2,8 @@ import React from 'react';
 
 import { HomePage } from './pages/homepage/homepage.component';
 import { Route, Switch, useLocation } from 'react-router-dom';
+import ShopPage from './pages/shop/shop.component';
 import './App.css';
-
-
-const HatsPage = ()=>(
-  <div> Hats Page </div>
-);
 
 const NotFoundPage = ()=>{
   var location = useLocation();
@@ -23,7 +19,7 @@ function App() {
     <div>
       <Switch>
         <Route exact={true} path='/' component = {HomePage}/>
-        <Route exact={true} path='/shop/hats' component = {HatsPage}/>
+        <Route exact={true} path='/shop' component = {ShopPage}/>
         <Route  path='*' component = {NotFoundPage}/>
       </Switch>
       
